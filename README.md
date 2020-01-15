@@ -1,2 +1,0 @@
-# hunta
-Hunta frontend
