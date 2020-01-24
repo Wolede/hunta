@@ -4,6 +4,29 @@
 *{
     font-family: 'Poppins', 'sans-serif' ;
 }
+.hero-text{
+    font-size: 6.25rem;
+
+    @media (max-width: 768px) { 
+        font-size: 3.5rem;    
+    }
+}
+.hero-text-2{
+    font-size: 3.75rem;
+
+    @media (max-width: 768px) { 
+        font-size: 2.5rem;    
+    }
+}
+// .h1 is for header 1
+// .h3 for header 2
+// .h5 for header 5
+
 .btn-hunta-red{
     padding: .6em 2em;
+    box-shadow: 0 20px 30px rgba($color: $hunta-red, $alpha: .15);
+
+    &:hover{
+        box-shadow: 0 20px 30px rgba($color: $hunta-red, $alpha: .3);
+    }
 }
