@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap');
 @import "./custom-variables.scss";
 
+*{
+    font-family: 'Poppins', 'sans-serif' ;
+}
 .btn-hunta-red{
     padding: .6em 2em;
 }
