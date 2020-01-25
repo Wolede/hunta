@@ -1,0 +1,127 @@
+
+.card--hero {
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(1px);
+    border-radius: 5px;
+    width: 260px;
+    padding: 30px;
+    border: none;
+  
+    // backdrop-filter: opacity(1) blur(1px);
+    
+    &__header {
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        margin-top: 8.5rem;
+    }
+
+    &__body{
+        font-size: 14px;
+        font-weight: 400;
+        color: white;
+        margin-top: 25px;
+        margin-bottom: 33px;
+    }    
+    
+}
+
+.card--user {
+    border-radius: 5px;
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(1px);
+    border: none;
+    padding: 14px;
+
+    &__body{
+        text-align: center;
+        padding-top: 0px;
+    }
+    
+    &__img{
+        width: 94px;
+        align-self: center;
+    }
+
+    &__header{
+        margin-bottom: 10px;
+    }
+      
+    &__p{
+        font-size: 14px;
+    }
+
+    &__small{
+        margin-bottom: 21px;
+        font-size: 10px;
+    }
+}
+
+
+
+.card--about{
+    width: 23rem;
+    height: 24rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(1px);
+    border: none;
+    // padding: 40px;
+    text-align: center;
+
+    &__header {
+        font-size: 1.87rem;
+        font-weight: 600;
+        color: black;
+        margin-top: 5rem;
+        margin-bottom: 0;
+    }
+
+    &__body{
+        font-size: 14px;
+        color: black;
+        margin-top: 30px;
+        
+    }    
+
+}
+
+
+.card--jeje{
+    width: 16rem;
+    height: 26rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(1px);
+    border: none;
+    padding: 0 33px 30px;
+    text-align: center;
+
+    &__no{
+        font-size: 6rem;
+        font-weight: 500;
+        margin-top: 15px;
+        color: black;
+        margin-bottom: 0;
+    }
+
+    &__header {
+        font-size: 1.87rem;
+        font-weight: 600;
+        color: black; 
+        text-align: left;  
+        margin-bottom: 0;
+        margin-top: 10px;     
+    }
+
+    &__body{
+        font-size: 14px;
+        color: black;
+        margin-top: 41px;
+        text-align: left;        
+    }    
+
+}
+
+
