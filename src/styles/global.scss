@@ -30,3 +30,16 @@
         box-shadow: 0 20px 30px rgba($color: $hunta-red, $alpha: .3);
     }
 }
+.text-red{
+    color: $hunta-red;
+}
+
+.background-image{
+    height: 100%;
+}
+.jumbotron{
+    background-color: transparent;
+}
+
+
+@import "../components/section/section.scss";
