@@ -1,0 +1,11 @@
+.image-card{
+    cursor: pointer;
+    
+    .image-card-image{
+        height: 21rem;
+
+        &::before{
+            border-radius: 5px;
+        }
+    }
+}

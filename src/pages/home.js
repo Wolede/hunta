@@ -5,6 +5,7 @@ import Section from '../components/section/section'
 import BackgroundImage from '../components/background-image/background-image'
 import { Container, Row, Col, Button } from 'reactstrap';
 import Footer from '../components/footer/footer';
+import ImageCards from '../components/image-cards/image-cards';
 const Home = () => {
     return (
         <div>
@@ -16,6 +17,10 @@ const Home = () => {
             <Section id="tours">
                 <Container>
                     <h1 className="h1 inline">Tours</h1> <span className="text-red">Featured</span>
+                    <ImageCards/>
+                    <div className="text-center">
+                        <Button color="hunta-red">View All</Button>
+                    </div>
                 </Container>
             </Section>
 

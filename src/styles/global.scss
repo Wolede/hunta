@@ -40,6 +40,12 @@
 .jumbotron{
     background-color: transparent;
 }
+.card{
+    border-radius: 0;
+    border: none;
+}
 
 
 @import "../components/section/section.scss";
+@import "../components/hero/hero.scss";
+@import "../components/image-cards/image-card/image-card.scss";
