@@ -9,6 +9,7 @@ import ImageCards from '../components/image-cards/image-cards';
 import VideoBox from '../components/video-box/video-box';
 import Nav from '../components/nav/nav'
 import Cards from '../components/cards/cards';
+import ModalButton from '../components/modal/modal-button';
 
 const Home = () => {
     return (
@@ -59,7 +60,7 @@ const Home = () => {
                             et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                             </p>
-                            <Button color="hunta-red button-container">Get a Quote</Button>
+                            <ModalButton color="hunta-red button-container" form>Get a Quote</ModalButton>
                         </Col>
                         <Col md="6">
                             <BackgroundImage src="Hotel.jpg"/>
