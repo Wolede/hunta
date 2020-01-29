@@ -8,6 +8,7 @@ import Footer from '../components/footer/footer';
 import ImageCards from '../components/image-cards/image-cards';
 import VideoBox from '../components/video-box/video-box';
 import Nav from '../components/nav/nav'
+import Cards from '../components/cards/cards';
 
 const Home = () => {
     return (
@@ -71,6 +72,7 @@ const Home = () => {
             
                 <Section fullwidth backgroundImage="AboveAdventure.jpg">
                     <Container>
+                        <Cards type="card-users" />
                         <div className="text-center button-container">
                             <Button color="hunta-red">View All</Button>
                         </div>

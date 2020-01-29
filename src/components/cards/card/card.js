@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card as BootCard, CardBody, Button, CardTitle, CardText, CardImg, Col } from 'reactstrap';
-import img1 from "../../../images/avatar-4.png"
 
 const Card = (props) => {
 
@@ -8,7 +7,7 @@ const Card = (props) => {
         case "card-hero": return (
             <Col sm="6">
                 <BootCard className="card--hero" body inverse>
-                    <CardTitle className='card--hero__header'>Tours</CardTitle>
+                    <CardTitle className='card--hero__header'>{props.title}</CardTitle>
                     <CardText className='card--hero__body' >Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                     sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.
                     </CardText>
@@ -17,13 +16,13 @@ const Card = (props) => {
         );
 
         case "card-users": return (
-            <Col sm="6">
+            <Col sm="4">
                 <BootCard className="card--user">
-                    <CardImg className="card--user__img" src={img1} alt="Card image cap" />
+                    <CardImg className="card--user__img" src={props.image} alt="Card image cap" />
                     <CardBody className="card--user__body">
-                        <CardTitle className="card--user__header">Mrs. Emenike</CardTitle>
+                        <CardTitle className="card--user__header">{props.name}</CardTitle>
                         <CardText className="card--user__small">
-                            <small className="text-muted">Lagos, Nigeria</small>
+                            <small>{props.location}</small>
                         </CardText>
                         <CardText className="card--user__p">" Working with Hunta on planning our family vacation for this year, was nothing short of a very efficient process.
                         From choosing the destination to visa assistance, hotel and tour arrangements, it was a seamless and stress-free process."

@@ -1,6 +1,6 @@
 
 .card--hero {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.20);
     backdrop-filter: blur(1px);
     border-radius: 5px !important;
     // width: 260px;
@@ -13,7 +13,7 @@
     &__header {
         font-size: 2rem;
         font-weight: 600;
-        color: white;
+        color: #ffffff;
         margin-top: 5rem;
     }
 
@@ -21,19 +21,18 @@
         // font-size: 14px;
         font-weight: 400;
         font-size: .8rem;
-        color: white;
+        color: #ffffff;
         margin-top: .8rem;
     }    
     
 }
 
 .card--user {
-    border-radius: 5px;
-    width: 260px;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(1px);
+    border-radius: 5px !important;
+    padding: 1.8rem;
     border: none;
-    padding: 14px;
 
     &__body{
         text-align: center;
@@ -41,21 +40,26 @@
     }
     
     &__img{
-        width: 94px;
+        width: 5.8rem;
         align-self: center;
+        margin-bottom: .9rem;
     }
 
     &__header{
-        margin-bottom: 10px;
+        margin-bottom: .7rem;
+        color: #ffffff;
     }
       
     &__p{
-        font-size: 14px;
+        font-weight: 400;
+        font-size: .8rem;
+        color: #ffffff;
     }
 
     &__small{
-        margin-bottom: 21px;
-        font-size: 10px;
+        margin-bottom: 1.3rem;
+        font-size: .7rem;
+        color: #ffffff;
     }
 }
 
