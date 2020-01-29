@@ -6,11 +6,15 @@ import BackgroundImage from '../components/background-image/background-image'
 import { Container, Row, Col, Button } from 'reactstrap';
 import Footer from '../components/footer/footer';
 import ImageCards from '../components/image-cards/image-cards';
+import VideoBox from '../components/video-box/video-box';
+import Nav from '../components/nav/nav'
+
 const Home = () => {
     return (
         <div>
             <SEO title="Home" />
             {/* Hero Section */}
+            <Nav />
             <Hero/>
 
             {/* Tours Section */}
@@ -18,7 +22,7 @@ const Home = () => {
                 <Container>
                     <h1 className="h1 inline">Tours</h1> <span className="text-red">Featured</span>
                     <ImageCards/>
-                    <div className="text-center">
+                    <div className="text-center button-container">
                         <Button color="hunta-red">View All</Button>
                     </div>
                 </Container>
@@ -35,7 +39,8 @@ const Home = () => {
             <Section id="jeje">
                 <Container>
                     <h1 className="h1">Jeje</h1>
-                    <div className="text-center">
+                    <VideoBox/>
+                    <div className="text-center button-container">
                         <Button color="hunta-red">How it Works</Button>
                     </div>
                 </Container>
@@ -53,7 +58,7 @@ const Home = () => {
                             et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                             </p>
-                            <Button color="hunta-red">Get a Quote</Button>
+                            <Button color="hunta-red button-container">Get a Quote</Button>
                         </Col>
                         <Col md="6">
                             <BackgroundImage src="Hotel.jpg"/>
@@ -63,15 +68,15 @@ const Home = () => {
             </Section>
 
             {/* Testimonials Section */}
-            <BackgroundImage src="AboveAdventure.jpg">
-                <Section>
+            
+                <Section fullwidth backgroundImage="AboveAdventure.jpg">
                     <Container>
-                        <div className="text-center">
+                        <div className="text-center button-container">
                             <Button color="hunta-red">View All</Button>
                         </div>
                     </Container>
                 </Section>
-            </BackgroundImage>
+            
 
             {/* Footer Section */}
             <Footer />

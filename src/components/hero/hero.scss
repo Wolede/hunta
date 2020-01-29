@@ -1,10 +1,16 @@
 .hero-section{
-
+    padding-top: 12rem;
     .h5.inline{
         display: inline-block;
         margin-right: 20px;
+        margin-top: 3.7rem;
     }
     img.icon{
         height: 1.8rem;
     }
+
+}
+.hero-image::before{
+    background-color: rgba($color: $hunta-blue, $alpha: .7);
+    background-blend-mode: multiply;
 }

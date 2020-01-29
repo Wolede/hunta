@@ -10,7 +10,7 @@ const ContactBox = () => {
         <Section>
             <Container>
                 <p className="text-center">Have Questions?</p>
-                <h1 className="text-center">Talk to Us</h1>
+                <h1 className="h1 text-center">Talk to Us</h1>
                 <Row style={{ maxWidth: 600, margin: `auto` }}>
                     <Col sm="6">
                         <Card body style={{ backgroundColor: 'transparent', border: 'none' }} className="text-center">

@@ -6,6 +6,7 @@
 }
 .hero-text{
     font-size: 6.25rem;
+    margin-bottom: 2.1rem;
 
     @media (max-width: 768px) { 
         font-size: 3.5rem;    
@@ -13,14 +14,28 @@
 }
 .hero-text-2{
     font-size: 3.75rem;
+    margin-bottom: 2.1rem;
 
     @media (max-width: 768px) { 
         font-size: 2.5rem;    
     }
 }
 // .h1 is for header 1
+.h1{
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
 // .h3 for header 2
 // .h5 for header 5
+.h5{
+    font-weight: 600;
+}
+
+// custom weights
+.regular-weight{
+    font-weight: 400;
+}
 
 .btn-hunta-red{
     padding: .6em 2em;
@@ -30,22 +45,40 @@
         box-shadow: 0 20px 30px rgba($color: $hunta-red, $alpha: .3);
     }
 }
+
 .text-red{
     color: $hunta-red;
+}
+
+.hunta-link{
+    color: #ffffff;
+
+    &:hover{
+        color: $hunta-red;
+    }
 }
 
 .background-image{
     height: 100%;
 }
+
 .jumbotron{
     background-color: transparent;
 }
+
 .card{
     border-radius: 0;
     border: none;
 }
 
+.button-container{
+    margin-top: 3rem;
+}
 
 @import "../components/section/section.scss";
 @import "../components/hero/hero.scss";
 @import "../components/image-cards/image-card/image-card.scss";
+@import "../components/video-box/video-box.scss";
+@import "../components/logo/logo.scss";
+@import "../components/nav/nav.scss";
+@import "../components/nav/open-nav/open-nav.scss";

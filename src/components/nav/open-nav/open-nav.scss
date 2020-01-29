@@ -1,0 +1,36 @@
+.open-nav{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+
+    .open-nav-menu{
+        background-color: black;
+        padding: 3rem 0;
+        position: relative;
+        text-align: center;
+        .nav{
+            justify-content: center;
+            padding-top: 1.5rem;
+            @media (max-width: 768px) { 
+                float: none;  
+                display: inline-block; 
+            }
+        }
+    }
+
+    .open-nav-overlay{
+        background-color: rgba($color: #000000, $alpha: .5);
+        height: 100%;
+        position: relative;
+    }
+
+    .close-button{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+}

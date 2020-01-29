@@ -1,0 +1,20 @@
+.video-box{
+    height: 18rem;
+    text-align: center;
+    line-height: 18rem;
+    &::before{
+        border-radius: 5px;
+        background-color: rgba($color: #000000, $alpha: .7);
+        background-blend-mode: multiply;
+    }
+
+    .play-button{
+        width: 4.75rem;
+        height: 4.75rem;
+        background-color: $hunta-red;
+
+        .play-icon{
+            
+        }
+    }
+}
