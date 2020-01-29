@@ -4,10 +4,7 @@ import Cards from '../components/cards/cards';
 import '../styles/global.scss';
 
 const IndexPage = () => (
-    <div>
-        <Home />
-        <Cards type="card-about"/>
-    </div>
+    <Home />
 
 )
 

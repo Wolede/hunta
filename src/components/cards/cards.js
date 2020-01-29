@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, CardBody, Button, CardTitle, CardText, CardImg, Container } from 'reactstrap';
-import "../cards/cards.scss";
 import img1 from "../../images/avatar-4.png"
 
-const cards = (props) => {
+const Cards = (props) => {
 
 
     switch (props.type) {
@@ -64,4 +63,4 @@ const cards = (props) => {
 
 }
 
-export default cards;
+export default Cards;

@@ -2,6 +2,7 @@ import React from 'react'
 import BackgroundImage from '../background-image/background-image'
 import { Jumbotron, Container, Row, Col } from 'reactstrap';
 import paperPlane from '../../images/paper-plane.svg'
+import Cards from '../cards/cards';
 // import Nav from '../nav/nav'
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
                                 <h5 className="h5 text-white inline regular-weight">Let us take you there</h5> <img src={paperPlane} alt="paper plane" className="icon"/>
                             </Col>
                             <Col md="6">
-
+                                <Cards type="card-hero" />
                             </Col>
                         </Row>
                     </Container>
