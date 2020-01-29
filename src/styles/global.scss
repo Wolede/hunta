@@ -4,6 +4,17 @@
 *{
     font-family: 'Poppins', 'sans-serif' ;
 }
+
+html{
+    @media  (min-width: 992px) and (max-width: 1199.98px){
+        font-size: 12px;
+    }
+    @media  (min-width: 1200px) and (max-width: 1600px){
+        font-size: 14px;
+    }
+    scroll-behavior: smooth;
+}
+
 .hero-text{
     font-size: 6.25rem;
     margin-bottom: 2.1rem;
