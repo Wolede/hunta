@@ -17,7 +17,9 @@ const Hero = () => {
                                 <h2 className="hero-text-2 text-white">Dream,</h2>
                                 <h1 className="hero-text text-white">Discover,</h1>
                                 <h2 className="hero-text-2 text-white">Explore.</h2>
-                                <h5 className="h5 text-white inline regular-weight">Let us take you there</h5> <img src={paperPlane} alt="paper plane" className="icon"/>
+                                <div>
+                                    <h5 className="h5 text-white inline regular-weight">Let us take you there</h5> <img src={paperPlane} alt="paper plane" className="icon"/>
+                                </div>
                             </Col>
                             <Col className="hero-cards" md="6">
                                 <Cards type="card-hero" />
