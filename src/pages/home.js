@@ -80,6 +80,7 @@ const Home = () => {
 
             {/* Footer Section */}
             <Footer />
+
         </div>
     )
 }

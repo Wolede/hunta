@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap');
 @import "./custom-variables.scss";
-
+@import "../components/cards/cards.scss";
 *{
     font-family: 'Poppins', 'sans-serif' ;
 }
