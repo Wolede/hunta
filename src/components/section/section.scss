@@ -1,6 +1,12 @@
 .hunta-section{
     padding: 5rem 0;
 
+    .about-icon{
+        display: flex;
+        justify-content: center;
+        height: 8.1rem;
+    }
+
     .h1.inline{
         display: inline-block;
         margin-right: 20px;
