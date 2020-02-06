@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card as BootCard, CardBody, Button, CardTitle, CardText, CardImg, Col } from 'reactstrap';
+import { Card as BootCard, CardBody, CardTitle, CardText, CardImg, Col } from 'reactstrap';
 
 const Card = (props) => {
 

@@ -1,3 +1,5 @@
+## Include all new scss files in src/styles/global.scss
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

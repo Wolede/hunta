@@ -32,7 +32,7 @@ const OpenNav = (props) => {
                     </NavItem>
                 </BootNav>
             </div>
-            <div className="open-nav-overlay" onClick={props.toggle} role="button">
+            <div className="open-nav-overlay" onClick={props.toggle} role="dialog">
 
             </div>
         </div>
