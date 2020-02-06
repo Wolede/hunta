@@ -3,13 +3,10 @@
     background-color: rgba(255, 255, 255, 0.20);
     backdrop-filter: blur(1px);
     border-radius: 5px !important;
-    // width: 260px;
     padding: 1.8rem;
     margin-bottom: 1.8rem;
     border: none;
-  
-    // backdrop-filter: opacity(1) blur(1px);
-    
+      
     &__header {
         font-size: 2rem;
         font-weight: 600;
@@ -94,36 +91,28 @@
 
 
 .card--jeje{
-    width: 16rem;
-    height: 26rem;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(1px);
+    border-radius: 5px !important;
+    padding: 2rem;
     border: none;
-    padding: 0 33px 30px;
-    text-align: center;
+    color: #ffffff;
 
     &__no{
         font-size: 6rem;
         font-weight: 500;
-        margin-top: 15px;
-        color: black;
-        margin-bottom: 0;
+        text-align: center;
     }
 
     &__header {
         font-size: 1.87rem;
         font-weight: 600;
-        color: black; 
         text-align: left;  
-        margin-bottom: 0;
-        margin-top: 10px;     
+        margin-bottom: 2.5rem;
     }
 
     &__body{
-        font-size: 14px;
-        color: black;
-        margin-top: 41px;
+        font-size: .8rem;
         text-align: left;        
     }    
 

@@ -19,16 +19,16 @@ const OpenNav = (props) => {
                         <Link to="/" className="nav-link hunta-link">Home</Link>
                     </NavItem>
                     <NavItem>
-                        <Link to="/" className="nav-link hunta-link">About</Link>
+                        <Link to="/about" className="nav-link hunta-link">About</Link>
                     </NavItem>
                     <NavItem>
-                        <Link to="/" className="nav-link hunta-link">Tours</Link>
+                        <Link to="/tours" className="nav-link hunta-link">Tours</Link>
                     </NavItem>
                     <NavItem>
-                        <Link to="/" className="nav-link hunta-link">Jeje</Link>
+                        <Link to="/jeje" className="nav-link hunta-link">Jeje</Link>
                     </NavItem>
                     <NavItem>
-                        <Link to="/" className="nav-link hunta-link">Contact</Link>
+                        <Link to="/contact" className="nav-link hunta-link">Contact</Link>
                     </NavItem>
                 </BootNav>
             </div>

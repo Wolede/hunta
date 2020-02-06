@@ -10,6 +10,7 @@ import VideoBox from '../components/video-box/video-box';
 import Nav from '../components/nav/nav'
 import Cards from '../components/cards/cards';
 import ModalButton from '../components/modal/modal-button';
+import { Link } from 'gatsby';
 
 const Home = () => {
     return (
@@ -43,7 +44,7 @@ const Home = () => {
                     <h1 className="h1">Jeje</h1>
                     <VideoBox/>
                     <div className="text-center button-container">
-                        <Button color="hunta-red">How it Works</Button>
+                        <Link to="/jeje" className="btn btn-hunta-red">How it Works</Link>
                     </div>
                 </Container>
             </Section>
@@ -71,7 +72,7 @@ const Home = () => {
 
             {/* Testimonials Section */}
             
-                <Section fullwidth backgroundImage="AboveAdventure.jpg">
+                <Section id="testimonials" fullwidth backgroundImage="AboveAdventure.jpg">
                     <Container>
                         <Cards type="card-users" />
                         <div className="text-center button-container">

@@ -46,12 +46,11 @@ const Card = (props) => {
         );
 
         case "card-jeje": return (
-            <Col sm="6">
+            <Col sm="3">
                 <BootCard className="card--jeje" body inverse>
-                    <CardTitle className='card--jeje__no'>1</CardTitle>
-                    <CardTitle className='card--jeje__header'>Register</CardTitle>
-                    <CardText className='card--jeje__body' >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.
+                    <CardTitle className='card--jeje__no'>{props.number}</CardTitle>
+                    <CardTitle className='card--jeje__header'>{props.title}</CardTitle>
+                    <CardText className='card--jeje__body' >{props.description}
                     </CardText>
                 </BootCard>
             </Col>
