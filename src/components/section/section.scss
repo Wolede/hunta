@@ -1,6 +1,9 @@
 .hunta-section{
     padding: 5rem 0;
 
+    &.dark-background{
+        background-color: #000000;
+    }
     .h1.inline{
         display: inline-block;
         margin-right: 20px;

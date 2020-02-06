@@ -12,7 +12,7 @@ const Section = (props) => {
                         </section>
                     </BackgroundImage>
                 ) : (
-                    <section id={props.id} className="hunta-section">
+                    <section id={props.id} className={props.darkBackground ? 'hunta-section dark-background' : 'hunta-section'}>
                         {props.children}
                     </section>
                 )

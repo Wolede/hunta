@@ -6,12 +6,14 @@ const Card = (props) => {
     switch (props.type) {
         case "card-hero": return (
             <Col sm="6">
+                <a href={`#${props.scrollTo}`}>
                 <BootCard className="card--hero" body inverse>
                     <CardTitle className='card--hero__header'>{props.title}</CardTitle>
                     <CardText className='card--hero__body' >Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                     sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At.
                     </CardText>
                 </BootCard>
+                </a>
             </Col>
         );
 

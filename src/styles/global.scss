@@ -43,6 +43,11 @@ html{
     font-weight: 600;
 }
 
+///smaller paragraph tags
+p.smaller{
+    font-size: .8rem;
+}
+
 // custom weights
 .regular-weight{
     font-weight: 400;
@@ -66,6 +71,19 @@ html{
 
     &:hover{
         color: $hunta-red;
+    }
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a.red-link{
+    color: $hunta-red;
+
+    &:hover{
+        color: $hunta-red;
+        text-decoration: underline;
     }
 }
 

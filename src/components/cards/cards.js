@@ -8,10 +8,10 @@ const Cards = (props) => {
         <Row>
             {props.type === 'card-hero' &&
                 <>
-                    <Card type={props.type} title="Tours"/>
-                    <Card type={props.type} title="Flights" />
-                    <Card type={props.type} title="Hotels" />
-                    <Card type={props.type} title="JejePay" />
+                    <Card type={props.type} title="Tours" scrollTo="tours" />
+                    <Card type={props.type} title="Flights" scrollTo="flights" />
+                    <Card type={props.type} title="Hotels" scrollTo="hotels" />
+                    <Card type={props.type} title="JejePay" scrollTo="jeje" />
                 </>
             }
 
