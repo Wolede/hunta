@@ -1,11 +1,11 @@
 import React from 'react'
 import SEO from "../components/seo"
 import Nav from '../components/nav/nav'
+import Footer from '../components/footer/footer';
 import Section from '../components/section/section'
 import { Container, Row, Col, Button } from 'reactstrap';
 import VideoBox from '../components/video-box/video-box';
 import Cards from '../components/cards/cards';
-import Footer from '../components/footer/footer';
 
 const Jeje = () => {
     return (

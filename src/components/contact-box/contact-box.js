@@ -15,14 +15,14 @@ const ContactBox = () => {
                     <Col sm="6">
                         <Card body style={{ backgroundColor: 'transparent', border: 'none' }} className="text-center">
                             <img src={call} alt="call icon" />
-                            <CardTitle>Office hours: 8am - 6pm</CardTitle>
+                            <CardTitle className="mt-3">Office hours: 8am - 6pm</CardTitle>
                             <CardText className="text-red">+234-14547726</CardText>
                         </Card>
                     </Col>
                     <Col sm="6">
                         <Card body style={{ backgroundColor: 'transparent', border: 'none' }} className="text-center">
                             <img src={email} alt="email icon" />
-                            <CardTitle>Email Support</CardTitle>
+                            <CardTitle className="mt-3">Email Support</CardTitle>
                             <CardText className="text-red">hello@huntagroup.com</CardText>
                         </Card>
                     </Col>
