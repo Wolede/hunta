@@ -16,7 +16,7 @@ const About = () => {
             <SEO title="About" />
             {/* Header Section */}
             <Nav />
-            <Header />
+            <Header type="header-about" info="tour"/>
 
             {/* About Section */}
             <Section id="about">

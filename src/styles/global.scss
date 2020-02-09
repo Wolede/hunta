@@ -89,10 +89,15 @@ html{
     margin-top: 3rem;
 }
 
+.header-p{
+    font-size: 1.25rem;
+
+}
+
 
 @import "../components/section/section.scss";
 @import "../components/hero/hero.scss";
-// @import "../components/header/header.scss";
+@import "../components/header/header.scss";
 @import "../components/image-cards/image-card/image-card.scss";
 @import "../components/video-box/video-box.scss";
 @import "../components/logo/logo.scss";

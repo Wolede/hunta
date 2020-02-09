@@ -1,7 +1,26 @@
-.header-image{
-    background-color: rgba($color: $hunta-blue, $alpha: .5);
+.header-image::before{
+    background-color: rgba($color: $hunta-blue, $alpha: .7);
     background-blend-mode: multiply;    
-    height: 418px;
-    
+    // height: 418px;
 }
 
+.hero-section{
+    padding-top: 11rem;
+    color: white;
+
+    &__intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--page{
+            // font-size: ;
+        }
+    
+        &--intro{
+    
+        }
+
+    }
+    
+}
