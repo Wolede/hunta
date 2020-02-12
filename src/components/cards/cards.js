@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 import Card from './card/card'
 import userImageOne from "../../images/avatar-4.png"
 

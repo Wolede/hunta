@@ -3,9 +3,10 @@ import SEO from "../components/seo"
 import Nav from '../components/nav/nav'
 import Footer from '../components/footer/footer';
 import Section from '../components/section/section'
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container } from 'reactstrap';
 import VideoBox from '../components/video-box/video-box';
 import Cards from '../components/cards/cards';
+import Header from '../components/header/header';
 
 const Jeje = () => {
     return (
@@ -14,7 +15,7 @@ const Jeje = () => {
             {/* Hero Section */}
             <Nav />
             {/* insert hero here */}
-
+            <Header type="header-jeje"/>
             {/* Calculate Jeje Section */}
             <Section id="calculate-jeje">
                 <Container>
