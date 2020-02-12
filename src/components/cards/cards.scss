@@ -1,123 +1,124 @@
-
-.card--hero {
-    background-color: rgba(255, 255, 255, 0.20);
-    backdrop-filter: blur(1px);
-    border-radius: 5px !important;
-    padding: 1.8rem;
-    margin-bottom: 1.8rem;
-    border: none;
-      
-    &__header {
-        font-size: 2rem;
-        font-weight: 600;
-        color: #ffffff;
-        margin-top: 5rem;
+.hunta-cards{
+    .card{
+        height: 100%;
     }
-
-    &__body{
-        // font-size: 14px;
-        font-weight: 400;
-        font-size: .8rem;
-        color: #ffffff;
-        margin-top: .8rem;
-    }    
+    [class*="col-"]{
+        margin-bottom: 1.8rem;
+    }
+    .card--hero {
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(1px);
+        border-radius: 5px !important;
+        padding: 1.8rem;
+        margin-bottom: 1.8rem;
+        border: none;
+          
+        &__header {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 5rem;
+        }
     
-}
-
-.card--user {
-    background-color: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(1px);
-    border-radius: 5px !important;
-    padding: 1.8rem;
-    border: none;
-
-    &__body{
-        text-align: center;
-        padding-top: 0px;
-    }
-    
-    &__img{
-        width: 5.8rem;
-        align-self: center;
-        margin-bottom: .9rem;
-    }
-
-    &__header{
-        margin-bottom: .7rem;
-        color: #ffffff;
-    }
-      
-    &__p{
-        font-weight: 400;
-        font-size: .8rem;
-        color: #ffffff;
-    }
-
-    &__small{
-        margin-bottom: 1.3rem;
-        font-size: .7rem;
-        color: #ffffff;
-    }
-}
-
-
-
-.card--about{
-    width: 23rem;
-    height: 24rem;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(1px);
-    border: none;
-    // padding: 40px;
-    text-align: center;
-    
-
-    &__header {
-        font-size: 1.87rem;
-        font-weight: 600;
-        color: white;
-        margin-top: 5rem;
-        margin-bottom: 0;
-    }
-
-    &__body{
-        font-size: 14px;
-        color: white;
-        margin-top: 30px;
+        &__body{
+            // font-size: 14px;
+            font-weight: 400;
+            font-size: .8rem;
+            color: #ffffff;
+            margin-top: .8rem;
+        }    
         
-    }    
-
-}
-
-
-.card--jeje{
-    background-color: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(1px);
-    border-radius: 5px !important;
-    padding: 2rem;
-    border: none;
-    color: #ffffff;
-    margin-bottom: 1.8rem;
-
-    &__no{
-        font-size: 6rem;
-        font-weight: 500;
-        text-align: center;
     }
-
-    &__header {
-        font-size: 1.87rem;
-        font-weight: 600;
-        text-align: left;  
-        margin-bottom: 2.5rem;
+    
+    .card--user {
+        background-color: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(1px);
+        border-radius: 5px !important;
+        padding: 1.8rem;
+        border: none;
+    
+        &__body{
+            text-align: center;
+            padding-top: 0px;
+        }
+        
+        &__img{
+            width: 5.8rem;
+            align-self: center;
+            margin-bottom: .9rem;
+        }
+    
+        &__header{
+            margin-bottom: .7rem;
+            color: #ffffff;
+        }
+          
+        &__p{
+            font-weight: 400;
+            font-size: .8rem;
+            color: #ffffff;
+        }
+    
+        &__small{
+            margin-bottom: 1.3rem;
+            font-size: .7rem;
+            color: #ffffff;
+        }
     }
-
-    &__body{
-        font-size: .8rem;
-        text-align: left;        
-    }    
-
+    
+    
+    
+    .card--about{
+        background-color: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(1px);
+        border-radius: 5px !important;
+        padding: 5rem 2rem;
+        border: none;
+        color: #ffffff;
+        margin-bottom: 1.8rem;
+        
+    
+        &__header {
+            font-size: 1.87rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+    
+        &__body{
+            font-size: .8rem;      
+        }    
+    
+    }
+    
+    
+    .card--jeje{
+        background-color: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(1px);
+        border-radius: 5px !important;
+        padding: 2rem;
+        border: none;
+        color: #ffffff;
+        margin-bottom: 1.8rem;
+    
+        &__no{
+            font-size: 6rem;
+            font-weight: 500;
+            text-align: center;
+        }
+    
+        &__header {
+            font-size: 1.87rem;
+            font-weight: 600;
+            text-align: left;  
+            margin-bottom: 2.5rem;
+        }
+    
+        &__body{
+            font-size: .8rem;
+            text-align: left;        
+        }    
+    
+    }
 }
 
 

@@ -5,7 +5,7 @@ import userImageOne from "../../images/avatar-4.png"
 
 const Cards = (props) => {
     return (
-        <Row>
+        <Row className="hunta-cards">
             {props.type === 'card-hero' &&
                 <>
                     <Card type={props.type} title="Tours" scrollTo="tours" />
