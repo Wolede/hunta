@@ -1,6 +1,7 @@
 import React from 'react'
 import BackgroundImage from '../background-image/background-image'
 import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
+import Form from '../form/form';
 
 
 const Header = (props) => {
@@ -95,7 +96,20 @@ const Header = (props) => {
                                     </p>
                                 </Col>
                                 <Col className="hero-cards" md="6">
-                                    
+                                    <Form 
+                                    title="All Tour Packages" 
+                                    subjectTitle="Custom Tour Package"
+                                    firstName
+                                    lastName
+                                    emailAddress
+                                    phoneNumber
+                                    noOfAdults
+                                    noOfChildren
+                                    noOfActivities
+                                    duration
+                                    destination
+                                    budgetInNaira
+                                    />
                                 </Col>
                             </Row>
                         </Container>
