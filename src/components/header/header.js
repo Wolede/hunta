@@ -109,6 +109,7 @@ const Header = (props) => {
                                     duration
                                     destination
                                     budgetInNaira
+                                    buttonText="Start Conversation"
                                     />
                                 </Col>
                             </Row>

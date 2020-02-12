@@ -8,6 +8,15 @@ const Form = (props) => {
         lastName: '',
         emailAddress: '',
         subject: `You have a new ${props.subjectTitle} Form | Hunta Web`,
+        phoneNumber: '',
+        noOfAdults: '',
+        noOfChildren: '',
+        noOfActivities: '',
+        duration: '',
+        destination: '',
+        budgetInNaira: '',
+        ticketPrice: '',
+        flightDate: '',
         honeypot: '', // if any value received in this field, form submission will be ignored.
         message: '',
         replyTo: '@', // this will set replyTo of email to email address entered in the form
@@ -158,6 +167,32 @@ const Form = (props) => {
                             </FormGroup>
                         </Col>
                     }
+                    {props.ticketPrice &&
+                        <Col md={4}>
+                            <FormGroup>
+                                <Input type="number" name="ticketPrice" id="ticketPrice" placeholder="Ticket Price (NGN)" onChange={handleChange} required />
+                            </FormGroup>
+                        </Col>
+                    }
+                    {props.flightDate &&
+                        <Col md={4}>
+                            <FormGroup>
+                                <Input type="date" name="flightDate" id="flightDate" placeholder="Flight Date" onChange={handleChange} required />
+                            </FormGroup>
+                        </Col>
+                    }
+                    {props.message &&
+                        <Col md={12}>
+                            <FormGroup>
+                                <Input type="textarea" name="message" id="message" placeholder="message" onChange={handleChange} required />
+                            </FormGroup>
+                        </Col>
+                    }
+                    <Col md={12}>
+                        <FormGroup className="text-center">
+                            <Button type="submit" color="hunta-red" size="sm">{props.buttonText}</Button>
+                        </FormGroup>
+                    </Col>
                 </Row>
             </BootForm>
         </div>
