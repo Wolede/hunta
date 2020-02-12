@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Card from './card/card'
 import userImageOne from "../../images/avatar-4.png"
 
@@ -32,6 +32,14 @@ const Cards = (props) => {
                 </>
 
             }
+            {props.type === 'card-about' &&
+                <>
+                   <Card type={props.type} title="Our Vision" text="To be a leader in the travel industry by providing cost effective enhanced services, building relationships and ensuring profitability."/>
+                   <Card type={props.type} title="Our Mission" text="To build long-term relationships with our customers and clients, provide efficient service and exceptional customer service by using innovative solutions and advance technology to provide best-in-class services for business travel, management and corporate incentives."/>
+                   <Card type={props.type} title="Our Core Values" text="We believe in treating our customers with utmost regard, integrating sound advice, uncompromising quality, integrity and innovation into all aspects of our business functioning."/>
+                </>
+            }
+
         </Row>
     )
 }

@@ -35,12 +35,10 @@ const Card = (props) => {
         );
 
         case "card-about": return (
-            <Col sm="6">
+            <Col sm="4">
                 <BootCard className="card--about" body inverse>
-                    <CardTitle className='card--about__header'>Our Vision</CardTitle>
-                    <CardText className='card--about__body' >To be a leader in the travel industry by providing cost effective enhanced services,
-                    building relationships and ensuring profitability.
-                    </CardText>
+                    <CardTitle className='card--about__header'>{props.title}</CardTitle>
+                    <CardText className='card--about__body' >{props.text}</CardText>
                 </BootCard>
             </Col>
         );
