@@ -27,7 +27,7 @@ const Home = () => {
                     <h1 className="h1 inline">Tours</h1> <span className="text-red">Featured</span>
                     <ImageCards/>
                     <div className="text-center button-container">
-                        <Button color="hunta-red">View All</Button>
+                        <Link to="/tours" className="btn btn-hunta-red">View All</Link>
                     </div>
                 </Container>
             </Section>

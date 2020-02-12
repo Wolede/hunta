@@ -29,7 +29,7 @@ const Header = (props) => {
             {props.type === 'header-contact' && 
                 <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image">
                     {/* <Nav /> */}
-                    <Jumbotron fluid className="hero-section">
+                    <Jumbotron fluid className="hero-section hero-contact">
                         <Container>
                             <Row>
                                 <Col className="hero-content" md="6">

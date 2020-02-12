@@ -1,0 +1,18 @@
+.loading-placeholder{
+    border-radius: 5px;
+    height: 23rem;
+    box-shadow: 0 4px 16px rgba($color: #2E3649, $alpha: 0.1);
+    animation: pulse 1s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% {
+        background-color: rgba(165, 165, 165, 0.1)
+    }
+    50% {
+        background-color: rgba(165, 165, 165, 0.3)
+    }
+    100% {
+        background-color: rgba(165, 165, 165, 0.1)
+    }
+}
