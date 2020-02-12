@@ -5,7 +5,7 @@ import Nav from '../components/nav/nav'
 import Section from '../components/section/section'
 import BackgroundImage from '../components/background-image/background-image'
 import paperPlane from '../images/paper-plane.svg'
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Cards from '../components/cards/cards';
 import Footer from '../components/footer/footer';
 

@@ -1,9 +1,9 @@
 import React from "react"
-import About from "./about";
 import '../styles/global.scss';
+import Home from "./home";
 
 const IndexPage = () => (
-    <About />
+    <Home />
 
 )
 
