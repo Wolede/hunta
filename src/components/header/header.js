@@ -47,8 +47,17 @@ const Header = (props) => {
                                         Phone: +234-14547726
                                     </p>
                                 </Col>
-                                <Col className="hero-cards" md="6">
-                                    
+                                <Col className="hero-form" md="6">
+                                    <Form 
+                                    title="Leave us a message" 
+                                    subjectTitle="Contact Reaching out"
+                                    firstName
+                                    lastName
+                                    emailAddress
+                                    phoneNumber
+                                    message
+                                    buttonText="Send"
+                                    />
                                 </Col>
                             </Row>
                         </Container>
@@ -74,8 +83,19 @@ const Header = (props) => {
                                         This package will only be available to customers who book at least two weeks before their travel date. Pay with Jeje transactions must be inclusive of flight (i.e. flights only, flights + activities, flights + hotels).
                                     </p>
                                 </Col>
-                                <Col className="hero-cards" md="6">
-                                    
+                                <Col className="hero-form" md="6">
+                                    <Form 
+                                    title="Register for Jeje" 
+                                    subjectTitle="Jeje Registration"
+                                    firstName
+                                    lastName
+                                    emailAddress
+                                    phoneNumber
+                                    destination
+                                    flightDate
+                                    ticketPrice
+                                    buttonText="Register"
+                                    />
                                 </Col>
                             </Row>
                         </Container>
@@ -95,10 +115,10 @@ const Header = (props) => {
                                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At. 
                                     </p>
                                 </Col>
-                                <Col className="hero-cards" md="6">
+                                <Col className="hero-form" md="6">
                                     <Form 
                                     title="All Tour Packages" 
-                                    subjectTitle="Custom Tour Package"
+                                    subjectTitle="Custom Tour Package Request"
                                     firstName
                                     lastName
                                     emailAddress

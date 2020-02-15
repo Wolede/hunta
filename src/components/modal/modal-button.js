@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Modal as BootModal, ModalHeader, ModalBody } from 'reactstrap'
-// import Modal from './modal';
+import Form from '../form/form';
 
 const ModalButton = (props) => {
 
@@ -21,11 +21,22 @@ const ModalButton = (props) => {
                     </BootModal>
                 }
                 {props.form &&
-                    <BootModal isOpen={modal} toggle={toggle} className='' external={externalCloseBtn} centered>
-                        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-                        <ModalBody>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </ModalBody>
+                    <BootModal isOpen={modal} toggle={toggle} className='' external={externalCloseBtn} size="l" centered>
+                        <Form 
+                        title="Request to Book a Hotel" 
+                        subjectTitle="New Hotel Booking Request"
+                        firstName
+                        lastName
+                        emailAddress
+                        phoneNumber
+                        noOfAdults
+                        noOfChildren
+                        classOfHotel
+                        duration
+                        destination
+                        budgetInNaira
+                        buttonText="Get a Quote"
+                        />
                     </BootModal>
                 }
         </>

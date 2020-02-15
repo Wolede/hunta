@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
-import { Col, Row, Button, CustomInput, Form as BootForm, FormGroup, Label, Input } from 'reactstrap';
+import { Col, Row, Button, CustomInput, Form as BootForm, FormGroup, FormFeedback, FormText, Input } from 'reactstrap';
+import successImage from '../../images/SuccessImage.png'
 
 const Form = (props) => {
     const [contact, setContact] = useState({
         firstName: '',
         lastName: '',
         emailAddress: '',
-        subject: `You have a new ${props.subjectTitle} Form | Hunta Web`,
+        subject: `You have a new ${props.subjectTitle} | Hunta Web`,
         phoneNumber: '',
         noOfAdults: '',
         noOfChildren: '',
@@ -65,6 +66,10 @@ const Form = (props) => {
         }
       };
 
+      const clearResponse = () => {
+        setResponse({ type: '', message: '' })
+      }
+
     return (
         <div className="hunta-form">
             <h1 className="h1 text-center">{ props.title }</h1>
@@ -74,6 +79,7 @@ const Form = (props) => {
                         <Col md={6}>
                             <FormGroup>
                                 <Input type="text" name="firstName" id="firstName" placeholder="First Name" onChange={handleChange} required />
+                                <FormFeedback invalid>Oh noes! </FormFeedback>
                             </FormGroup>
                         </Col>
                     }
@@ -140,6 +146,20 @@ const Form = (props) => {
                             </FormGroup>
                         </Col>
                     }
+                    {props.classOfHotel &&
+                        <Col md={4}>
+                            <FormGroup>
+                                <CustomInput type="select" name="classOfHotel" id="classOfHotel" onChange={handleChange} required >
+                                    <option value="0">Class of Hotel</option>
+                                    <option value="1 Star">1 Star</option>
+                                    <option value="2 Stars">2 Stars</option>
+                                    <option value="3 Stars">3 Stars</option>
+                                    <option value="4 Stars">4 Stars</option>
+                                    <option value="5 Stars">5 Stars</option>
+                                </CustomInput>
+                            </FormGroup>
+                        </Col>
+                    }
                     {props.duration &&
                         <Col md={4}>
                             <FormGroup>
@@ -195,6 +215,16 @@ const Form = (props) => {
                     </Col>
                 </Row>
             </BootForm>
+
+            {/* If form submit is success */}
+            {response.type === 'success' &&
+                <div className="success-container">
+                    <img src={successImage} alt="success-checkmark" />
+                    <h5 className="h5">Email Sent!</h5>
+                    <p>We'll get back to you by email as soon as possible.</p>
+                    <span onClick={clearResponse} className='back-button'>Go back to form</span>
+                </div>
+            } 
         </div>
     )
 }

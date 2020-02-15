@@ -1,8 +1,10 @@
 .hunta-form{
+    position: relative;
     background-color: #ffffff;
     border-radius: 5px;
     padding: 3.1rem;
     color: #000000;
+    height: fit-content;
 
     input.form-control, select.custom-select, textarea.form-control {
         border-radius: 5px;
@@ -13,5 +15,39 @@
     }
     button{
         border-radius: 10rem;
+        margin-top: 1rem;
+    }
+
+
+    .success-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 3rem;
+
+        img{
+            margin-bottom: 2rem;
+            width: 12rem;
+        }
+        h5{
+            margin-bottom: 1.2rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .back-button{
+            font-size: .8rem;
+            color: $hunta-red;
+            cursor: pointer;
+        }
     }
 }
