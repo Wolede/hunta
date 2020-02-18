@@ -79,7 +79,7 @@ const Form = (props) => {
                         <Col md={6}>
                             <FormGroup>
                                 <Input type="text" name="firstName" id="firstName" placeholder="First Name" onChange={handleChange} required />
-                                <FormFeedback invalid>Oh noes! </FormFeedback>
+                                <FormFeedback invalid="true">Oh noes! </FormFeedback>
                             </FormGroup>
                         </Col>
                     }
