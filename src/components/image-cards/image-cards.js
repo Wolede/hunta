@@ -27,23 +27,22 @@ const ImageCards = () => {
 
     return (
         <Row>
-            <Col sm="4" md="3">
-                {
-                    loading ? (
-                    <div className="loading-placeholder">
-                        {/* loader here  */}
-                    </div>
-                ) 
-                :
-                    tours.map((tour, index) => (
+            {
+                loading ? (
+                <div className="loading-placeholder">
+                    {/* loader here  */}
+                </div>
+            ) 
+            :
+                tours.map((tour, index) => (
+                    <Col sm="4" md="3">
                         <ImageCard
                         key={index}
                         tour={tour}
                         />
-                    ))
-                }
-                
-            </Col>
+                    </Col>
+                ))
+            }
         </Row>
     )
 }

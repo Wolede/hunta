@@ -16,11 +16,24 @@ const Header = (props) => {
                             <div className="hero-section__intro">
                                 <h4 className="h5 regular-weight mb-9">About Us</h4>
                                 <h1 className="hero-text-2">Welcome to Hunta</h1>                                
-                                    {/* {(props.info === 'tour') ? <div>
-                                        <p className='regular-weight header-p'>Duration: 3days</p> 
-                                        <Button className="mt-4" color="hunta-red">Book Now</Button>
-                                        </div>: null
-                                    } */}
+                            </div>
+                        </Container>
+                    </Jumbotron>
+                </BackgroundImage>
+            }
+
+            {props.type === 'header-tour' &&
+                <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image">
+                    {/* <Nav /> */}
+                    <Jumbotron fluid className="hero-section">
+                        <Container >
+                            <div className="hero-section__intro">
+        <h4 className="h5 regular-weight mb-9">{props.city}, {props.country}</h4>
+        <h1 className="hero-text-2">{props.name}</h1>  
+                                <div>
+        <p className='regular-weight header-p'>Duration: {props.duration}</p> 
+                                    <Button className="mt-4" color="hunta-red">Book Now</Button>
+                                    </div>                              
                             </div>
                         </Container>
                     </Jumbotron>
