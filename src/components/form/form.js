@@ -54,40 +54,40 @@ const Form = (props) => {
             `,
             replyTo: '@'
         })
-        console.log(payload);
+        // console.log(payload);
         
     }
 
     const handleSubmit = async e => {
         e.preventDefault();
-        console.log(payload, 'data')
-        // try {
-        //   const res = await fetch('https://api.staticforms.xyz/submit', {
-        //     method: 'POST',
-        //     body: JSON.stringify(payload),
-        //     headers: { 'Content-Type': 'application/json' }
-        //   });
+        // console.log(payload, 'data')
+        try {
+          const res = await fetch('https://api.staticforms.xyz/submit', {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: { 'Content-Type': 'application/json' }
+          });
     
-        //   const json = await res.json();
+          const json = await res.json();
     
-        //   if (json.success) {
-        //     setResponse({
-        //       type: 'success',
-        //       message: 'Thank you for reaching out to us.'
-        //     });
-        //   } else {
-        //     setResponse({
-        //       type: 'error',
-        //       message: json.message
-        //     });
-        //   }
-        // } catch (e) {
-        //   console.log('An error occurred', e);
-        //   setResponse({
-        //     type: 'error',
-        //     message: 'An error occured while submitting the form'
-        //   });
-        // }
+          if (json.success) {
+            setResponse({
+              type: 'success',
+              message: 'Thank you for reaching out to us.'
+            });
+          } else {
+            setResponse({
+              type: 'error',
+              message: json.message
+            });
+          }
+        } catch (e) {
+          console.log('An error occurred', e);
+          setResponse({
+            type: 'error',
+            message: 'An error occured while submitting the form'
+          });
+        }
       };
 
       const clearResponse = () => {
