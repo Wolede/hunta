@@ -1,6 +1,6 @@
 import React from 'react'
 import BackgroundImage from '../background-image/background-image'
-import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
+import { Jumbotron, Container, Row, Col } from 'reactstrap';
 import Form from '../form/form';
 import ModalButton from '../modal/modal-button';
 

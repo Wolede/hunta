@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
-import { Col, Row, Button, CustomInput, Form as BootForm, FormGroup, FormFeedback, FormText, Input } from 'reactstrap';
+import { Col, Row, Button, CustomInput, Form as BootForm, FormGroup, FormFeedback, Input } from 'reactstrap';
 import successImage from '../../images/SuccessImage.png'
 
 const Form = (props) => {
@@ -8,7 +8,6 @@ const Form = (props) => {
         firstName: '',
         lastName: '',
         emailAddress: '',
-        subject: `You have a new ${props.subjectTitle} | Hunta Web`,
         phoneNumber: '',
         noOfAdults: '',
         noOfChildren: '',
@@ -18,52 +17,77 @@ const Form = (props) => {
         budgetInNaira: '',
         ticketPrice: '',
         flightDate: '',
-        honeypot: '', // if any value received in this field, form submission will be ignored.
         message: '',
-        replyTo: '@', // this will set replyTo of email to email address entered in the form
-        accessKey: '73c935f4-eac3-401d-8518-0416bb1b90e7' // get your access key from https://www.staticforms.xyz
     });
 
+    const [payload, setPayload] = useState({
+        subject: `You have a new ${props.subjectTitle} | Hunta Web`,
+        honeypot: '', // if any value received in this field, form submission will be ignored.
+        message: '',
+        replyTo: '', // this will set replyTo of email to email address entered in the form
+        accessKey: '73c935f4-eac3-401d-8518-0416bb1b90e7' // get your access key from https://www.staticforms.xyz
+    })
     const [response, setResponse] = useState({
         type: '',
         message: ''
     });
 
     const handleChange = e => {
-        setContact({ ...contact, [e.target.name]: e.target.value });
-        console.log(contact);
+        setContact({ ...contact, 
+            [e.target.name]: e.target.value 
+        });
+        setPayload({...payload,
+            name: `${contact.firstName} ${contact.lastName}`,
+            email: `${contact.emailAddress}`,
+            subject: `You have a new ${props.subjectTitle} | Hunta Web`,
+            message: `
+                Phone Number: ${contact.phoneNumber} <br/>
+                ${contact.duration ? `Duration: ${contact.duration}` : `Duration: ${props.duration}`}<br/>
+                ${contact.destination ? `Destination: ${contact.destination}` : `Destination: ${props.destination}`}<br/>
+                ${contact.noOfActivities ? `Number of Activities: ${contact.noOfActivities}` : '--'}<br/>
+                ${contact.noOfAdults ? `Number of Adults: ${contact.noOfAdults}` : '--'}<br/>
+                ${contact.noOfChildren ? `Number of Children: ${contact.noOfChildren}` : '--'}<br/>
+                ${contact.budgetInNaira ? `Budget: N${contact.budgetInNaira}` : '--'}<br/>
+                ${contact.ticketPrice ? `Ticket Price: ${contact.ticketPrice}` : '--'}<br/>
+                ${contact.flightDate ? `Flight Date: ${contact.flightDate}` : '--'}<br/><br/>
+                ${contact.message ? `Message: ${contact.message}` : '--'}
+            `,
+            replyTo: '@'
+        })
+        console.log(payload);
         
     }
 
     const handleSubmit = async e => {
         e.preventDefault();
-        try {
-          const res = await fetch('https://api.staticforms.xyz/submit', {
-            method: 'POST',
-            body: JSON.stringify(contact),
-            headers: { 'Content-Type': 'application/json' }
-          });
+        console.log(payload, 'data')
+        // try {
+        //   const res = await fetch('https://api.staticforms.xyz/submit', {
+        //     method: 'POST',
+        //     body: JSON.stringify(payload),
+        //     headers: { 'Content-Type': 'application/json' }
+        //   });
     
-          const json = await res.json();
+        //   const json = await res.json();
     
-          if (json.success) {
-            setResponse({
-              type: 'success',
-              message: 'Thank you for reaching out to us.'
-            });
-          } else {
-            setResponse({
-              type: 'error',
-              message: json.message
-            });
-          }
-        } catch (e) {
-          console.log('An error occurred', e);
-          setResponse({
-            type: 'error',
-            message: 'An error occured while submitting the form'
-          });
-        }
+        //   if (json.success) {
+        //     setResponse({
+        //       type: 'success',
+        //       message: 'Thank you for reaching out to us.'
+        //     });
+        //   } else {
+        //     setResponse({
+        //       type: 'error',
+        //       message: json.message
+        //     });
+        //   }
+        // } catch (e) {
+        //   console.log('An error occurred', e);
+        //   setResponse({
+        //     type: 'error',
+        //     message: 'An error occured while submitting the form'
+        //   });
+        // }
       };
 
       const clearResponse = () => {
@@ -215,6 +239,12 @@ const Form = (props) => {
                             </FormGroup>
                         </Col>
                     }
+                    {/* to protect against spam */}
+                    {/* <Col md={12} style={{display: 'none'}}>
+                        <FormGroup>
+                            <Input type="text" name="honeypot" id="honeypot" placeholder="honeypot" onChange={handleChange} required />
+                        </FormGroup>
+                    </Col> */}
                     <Col md={12}>
                         <FormGroup className="text-center">
                             <Button type="submit" color="hunta-red" size="sm">{props.buttonText}</Button>
@@ -229,7 +259,7 @@ const Form = (props) => {
                     <img src={successImage} alt="success-checkmark" />
                     <h5 className="h5">Email Sent!</h5>
                     <p>We'll get back to you by email as soon as possible.</p>
-                    <span onClick={clearResponse} className='back-button'>Go back to form</span>
+                    <span onClick={clearResponse} role="button" className='back-button'>Go back to form</span>
                 </div>
             } 
             {/* If form submit fails */}
@@ -238,7 +268,7 @@ const Form = (props) => {
                     <img src={successImage} alt="error-checkmark" />
                     <h5 className="h5">An error occured!</h5>
                     <p>We ran into a problem. Please try again.</p>
-                    <span onClick={clearResponse} className='back-button'>Go back to form</span>
+                    <span onClick={clearResponse} role="button" className='back-button'>Go back to form</span>
                 </div>
             } 
         </div>

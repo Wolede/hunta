@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Modal as BootModal, ModalHeader, ModalBody } from 'reactstrap'
+import { Button, Modal as BootModal } from 'reactstrap'
 import Form from '../form/form';
 
 const ModalButton = (props) => {
@@ -16,7 +16,7 @@ const ModalButton = (props) => {
                 {props.video &&
                     <BootModal isOpen={modal} toggle={toggle} className='' external={externalCloseBtn} size="xl" centered>
                         <div className="embed-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fbZO6UBtYTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fbZO6UBtYTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="modalFrame"></iframe>
                         </div>
                     </BootModal>
                 }

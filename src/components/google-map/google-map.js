@@ -20,6 +20,7 @@ const GoogleMap = () => {
             style={{border: 0}} 
             allowfullscreen
             onLoad={hideLoader}
+            title="maps"
             ></iframe>
         </>
     )
