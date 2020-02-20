@@ -51,13 +51,13 @@ const Tour = (props) => {
             <Section id="package-activites">
                 <Container>
                     <Row>
-                        <Col>
+                        <Col md="6">
                             <h1 className="h1">About Package</h1>
                             <p>
                                 { tour ? tour.About_Package : null }
                             </p>
                         </Col>
-                        <Col>
+                        <Col md="6">
                             <h1 className="h1">Activities</h1>
                             <p>
                                 { tour ? tour.Activities : null }
