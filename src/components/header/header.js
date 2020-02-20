@@ -2,6 +2,7 @@ import React from 'react'
 import BackgroundImage from '../background-image/background-image'
 import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
 import Form from '../form/form';
+import ModalButton from '../modal/modal-button';
 
 
 const Header = (props) => {
@@ -28,12 +29,19 @@ const Header = (props) => {
                     <Jumbotron fluid className="hero-section">
                         <Container >
                             <div className="hero-section__intro">
-        <h4 className="h5 regular-weight mb-9">{props.city}, {props.country}</h4>
-        <h1 className="hero-text-2">{props.name}</h1>  
+                                <h4 className="h5 regular-weight mb-9">{props.city}, {props.country}</h4>
+                                <h1 className="hero-text-2">{props.name}</h1>  
                                 <div>
-        <p className='regular-weight header-p'>Duration: {props.duration}</p> 
-                                    <Button className="mt-4" color="hunta-red">Book Now</Button>
-                                    </div>                              
+                                    <p className='regular-weight header-p'>Duration: {props.duration}</p> 
+                                    <ModalButton 
+                                    color="hunta-red button-container" 
+                                    form="tour"
+                                    destination={props.city}
+                                    duration={props.duration}
+                                    >
+                                        Book Now
+                                    </ModalButton>
+                                </div>                              
                             </div>
                         </Container>
                     </Jumbotron>

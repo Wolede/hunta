@@ -3,7 +3,7 @@ import BackgroundImage from '../../background-image/background-image'
 import { Card, CardTitle } from 'reactstrap';
 import { Link } from 'gatsby';
 const ImageCard = (props) => {
-    console.log(props, 'nested');
+    // console.log(props, 'nested');
     
     return (
         <div className="image-card">

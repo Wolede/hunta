@@ -163,12 +163,19 @@ const Form = (props) => {
                     {props.duration &&
                         <Col md={4}>
                             <FormGroup>
-                                <CustomInput type="select" name="duration" id="duration" onChange={handleChange} required >
-                                    <option value="0">Duration</option>
-                                    <option value="less than a week">less than a week</option>
-                                    <option value="less than a month">less than a month</option>
-                                    <option value="less than 3 months">less than 3 months</option>
-                                    <option value="more">more</option>
+                                <CustomInput type="select" name="duration" id="duration" onChange={handleChange} disabled={props.duration.length > 1 ? true : false } required >
+                                    {props.duration.length > 1 ?
+                                        <option value={props.duration} selected>{props.duration}</option>
+                                        :
+                                        <>
+                                        <option value="0">Duration</option>
+                                        <option value="less than a week">less than a week</option>
+                                        <option value="less than a month">less than a month</option>
+                                        <option value="less than 3 months">less than 3 months</option>
+                                        <option value="more">more</option>
+                                        </>
+                                    }
+                                    
                                 </CustomInput>
                             </FormGroup>
                         </Col>
@@ -176,7 +183,7 @@ const Form = (props) => {
                     {props.destination &&
                         <Col md={4}>
                             <FormGroup>
-                                <Input type="text" name="destination" id="destination" placeholder="Destination" onChange={handleChange} required />
+                                <Input type="text" name="destination" id="destination" placeholder="Destination" onChange={handleChange} value={props.destination.length > 1 ? props.destination : null} disabled={props.destination.length > 1 ? true : false } required />
                             </FormGroup>
                         </Col>
                     }
@@ -222,6 +229,15 @@ const Form = (props) => {
                     <img src={successImage} alt="success-checkmark" />
                     <h5 className="h5">Email Sent!</h5>
                     <p>We'll get back to you by email as soon as possible.</p>
+                    <span onClick={clearResponse} className='back-button'>Go back to form</span>
+                </div>
+            } 
+            {/* If form submit fails */}
+            {response.type === 'error' &&
+                <div className="success-container">
+                    <img src={successImage} alt="error-checkmark" />
+                    <h5 className="h5">An error occured!</h5>
+                    <p>We ran into a problem. Please try again.</p>
                     <span onClick={clearResponse} className='back-button'>Go back to form</span>
                 </div>
             } 

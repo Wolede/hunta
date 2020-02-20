@@ -50,9 +50,8 @@ const ImageCards = () => {
                 tours ? (
 
                     tours.map((tour, index) => (
-                        <Col sm="4" md="3">
+                        <Col sm="4" md="3" key={tour.id.toString()}>
                             <ImageCard
-                            key={index}
                             tour={tour}
                             />
                         </Col>

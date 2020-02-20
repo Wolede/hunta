@@ -63,7 +63,7 @@ const Home = () => {
                             et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
                             </p>
-                            <ModalButton color="hunta-red button-container" form>Get a Quote</ModalButton>
+                            <ModalButton color="hunta-red button-container" form="hotel">Get a Quote</ModalButton>
                         </Col>
                         <Col md="6">
                             <BackgroundImage src="Hotel.jpg"/>

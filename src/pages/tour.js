@@ -6,6 +6,7 @@ import Nav from '../components/nav/nav'
 import Section from '../components/section/section'
 import { Container, Row, Col } from 'reactstrap';
 import Footer from '../components/footer/footer';
+import ModalButton from '../components/modal/modal-button'
 
 const Tour = (props) => {
     
@@ -71,8 +72,20 @@ const Tour = (props) => {
                     <h1 className="h1">The Experience</h1>
 
                     {/* images here */}
+
+                    <div className="text-center button-container">
+                        <ModalButton 
+                        color="hunta-red button-container" 
+                        form="tour" 
+                        destination={tour ? tour.City : null} 
+                        duration={tour ? tour.Duration : null} 
+                        >
+                            Book Now
+                        </ModalButton>
+                    </div>
                 </Container>
             </Section>
+
 
             {/* Footer Section */}
             <Footer />

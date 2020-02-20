@@ -20,7 +20,8 @@ const ModalButton = (props) => {
                         </div>
                     </BootModal>
                 }
-                {props.form &&
+
+                {props.form === "hotel" &&
                     <BootModal isOpen={modal} toggle={toggle} className='' external={externalCloseBtn} size="l" centered>
                         <Form 
                         title="Request to Book a Hotel" 
@@ -36,6 +37,26 @@ const ModalButton = (props) => {
                         destination
                         budgetInNaira
                         buttonText="Get a Quote"
+                        />
+                    </BootModal>
+                }
+
+                {props.form === "tour" &&
+                    <BootModal isOpen={modal} toggle={toggle} className='' external={externalCloseBtn} size="l" centered>
+                        <Form 
+                        title="Book Tour" 
+                        subjectTitle="New Tour Booking Request"
+                        firstName
+                        lastName
+                        emailAddress
+                        phoneNumber
+                        noOfAdults
+                        noOfChildren
+                        noOfActivities
+                        duration={props.duration}
+                        destination={props.destination}
+                        budgetInNaira
+                        buttonText="Start Conversation"
                         />
                     </BootModal>
                 }
