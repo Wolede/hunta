@@ -5,9 +5,9 @@ import ImageCard from './image-card/image-card';
 
 const ImageCards = () => {
     const [loading, setLoading] = useState(true);
-    const [tours, setTours] = useState({});
+    const [tours, setTours] = useState();
 
-    const baseUrl = 'http://hunta-api.herokuapp.com/tours'
+    const baseUrl = 'https://hunta-api.herokuapp.com/tours'
 
     const hideLoader = () => {
         setLoading(!loading)
@@ -15,13 +15,12 @@ const ImageCards = () => {
 
     useEffect(() => {
         axios.get(`${baseUrl}`).then(res => {
-            console.log(res);
             setTours(res.data);
-            console.log(tours, "tours image-cards");        
             hideLoader();
         })
         .catch(error => {
-            console.log(error);
+            // console.log(error);
+            hideLoader()
         })
     }, [])
 
@@ -29,19 +28,39 @@ const ImageCards = () => {
         <Row>
             {
                 loading ? (
-                <div className="loading-placeholder">
-                    {/* loader here  */}
-                </div>
+                    <>
+                    <Col sm="4" md="3">
+                        <div className="loading-placeholder">
+                            {/* loader here  */}
+                        </div>
+                    </Col>
+                    <Col sm="4" md="3">
+                        <div className="loading-placeholder">
+                            {/* loader here  */}
+                        </div>
+                    </Col>
+                    <Col sm="4" md="3">
+                        <div className="loading-placeholder">
+                            {/* loader here  */}
+                        </div>
+                    </Col>
+                    </>
             ) 
             :
-                tours.map((tour, index) => (
-                    <Col sm="4" md="3">
-                        <ImageCard
-                        key={index}
-                        tour={tour}
-                        />
-                    </Col>
-                ))
+                tours ? (
+
+                    tours.map((tour, index) => (
+                        <Col sm="4" md="3">
+                            <ImageCard
+                            key={index}
+                            tour={tour}
+                            />
+                        </Col>
+                    ))
+                ) : 
+                    <p className="text-center">
+                        No Tours Yet!
+                    </p>
             }
         </Row>
     )

@@ -11,15 +11,15 @@ const Footer = () => {
             <Section id="footer" darkBackground>
                 <Container>
                     <Row>
-                        <Col>
+                        <Col sm="4">
                             <Logo logoWhite />
                             <p className="text-white mt-4 smaller">10B1, SARUMOH OLADOSU CLOSE, OFF SHAKIRU ANJORIN STREET LEKKI PHASE 1, LAGOS, NIGERIA</p>
                         </Col>
-                        <Col>
+                        <Col sm="4">
                             <h6 className="h6 text-white">Newsletter</h6>
                             <p className="text-white mt-4 smaller">Sign up for our mailing list to get latest updates and offers.</p>
                         </Col>
-                        <Col>
+                        <Col sm="4">
                             <h6 className="h6 text-white inline mr-4">Instagram Feed</h6>  <a href="https://instagram.com" className="red-link">Follow Us</a>
                         </Col>
                     </Row>
