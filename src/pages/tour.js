@@ -27,7 +27,7 @@ const Tour = (props) => {
     useEffect(() => {
 
         if(!tour){
-            axios.get(`${baseUrl}${id}`).then(res => {
+            axios.get(`${baseUrl}/${id}`).then(res => {
                 console.log(res);
                 setTour(res.data);
                 console.log(tour, "fresh loaded tour");        
@@ -47,12 +47,39 @@ const Tour = (props) => {
             {/* insert hero here */}
             <Header 
             type="header-tour" 
-            duration={tour.Duration} 
-            name={tour.Name} 
-            city={tour.City} 
-            country={tour.Country} 
+            duration={tour ? tour.Duration : null} 
+            name={tour ? tour.Name : null} 
+            city={tour ? tour.City : null} 
+            country={tour ? tour.Country: null} 
             />
 
+            {/* About Package and Activities */}
+            <Section id="package-activites">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1 className="h1">About Package</h1>
+                            <p>
+                                { tour ? tour.About_Package : null }
+                            </p>
+                        </Col>
+                        <Col>
+                            <h1 className="h1">Activities</h1>
+                            <p>
+                                { tour ? tour.Activities : null }
+                            </p>
+                        </Col>
+                    </Row>
+                </Container>
+            </Section>
+
+            <Section id="the-experience">
+                <Container>
+                    <h1 className="h1">The Experience</h1>
+
+                    {/* images here */}
+                </Container>
+            </Section>
 
             {/* Footer Section */}
             <Footer />

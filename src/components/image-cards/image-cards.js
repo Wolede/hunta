@@ -5,7 +5,7 @@ import ImageCard from './image-card/image-card';
 
 const ImageCards = () => {
     const [loading, setLoading] = useState(true);
-    const [tours, setTours] = useState();
+    const [tours, setTours] = useState({});
 
     const baseUrl = 'http://hunta-api.herokuapp.com/tours'
 
@@ -17,7 +17,7 @@ const ImageCards = () => {
         axios.get(`${baseUrl}`).then(res => {
             console.log(res);
             setTours(res.data);
-            console.log(tours, "tours");        
+            console.log(tours, "tours image-cards");        
             hideLoader();
         })
         .catch(error => {
