@@ -12,10 +12,11 @@ const Tour = (props) => {
     
     const [loading, setLoading] = useState(true);
     const [tour, setTour] = useState(props.location.state);
+    console.log(tour);
     
+    const slug = props.slug    
     const baseUrl = 'https://hunta-api.herokuapp.com/tours'
-    const id = props.id
-
+    
     const hideLoader = () => {
         setLoading(!loading)
     }
@@ -23,8 +24,8 @@ const Tour = (props) => {
     useEffect(() => {
 
         if(!tour){
-            axios.get(`${baseUrl}/${id}`).then(res => {
-                setTour(res.data);
+            axios.get(`${baseUrl}?Slug=${slug}`).then(res => {
+                setTour(res.data[0]);  
                 hideLoader();
             })
             .catch(error => {
@@ -41,10 +42,11 @@ const Tour = (props) => {
             {/* insert hero here */}
             <Header 
             type="header-tour" 
-            duration={tour ? tour.Duration : null} 
-            name={tour ? tour.Name : null} 
-            city={tour ? tour.City : null} 
-            country={tour ? tour.Country: null} 
+            backgroundImage={tour ? tour.Cover_Image.url : null}
+            duration={tour ? tour.Duration : "No duration"} 
+            name={tour ? tour.Name : "No name"} 
+            city={tour ? tour.City : "No city"} 
+            country={tour ? tour.Country: "No country"} 
             />
 
             {/* About Package and Activities */}
@@ -54,13 +56,13 @@ const Tour = (props) => {
                         <Col md="6">
                             <h1 className="h1">About Package</h1>
                             <p>
-                                { tour ? tour.About_Package : null }
+                                { tour ? tour.About_Package : "No about information" }
                             </p>
                         </Col>
                         <Col md="6">
                             <h1 className="h1">Activities</h1>
                             <p>
-                                { tour ? tour.Activities : null }
+                                { tour ? tour.Activities : "No activities recorded" }
                             </p>
                         </Col>
                     </Row>

@@ -24,14 +24,33 @@ const BackgroundImage = (props) => {
       return n.node.relativePath.includes(props.src);
     });
     if (!image) { return null; }
-    return <BackgroundImg
-          Tag={props.htmlTag}
-          className={`${props.htmlClass} background-image`}
-          fluid={image.node.childImageSharp.fluid}
-          backgroundColor={props.bgColor}
-        >
-            {props.children}
-        </BackgroundImg>
+    return (
+		<>
+			{!props.regularUrl ? (
+				<BackgroundImg
+				Tag={props.htmlTag}
+				className={`${props.htmlClass} background-image`}
+				fluid={image.node.childImageSharp.fluid}
+				backgroundColor={props.bgColor}>
+					{props.children}
+				</BackgroundImg>
+			) : (
+				<div 
+				className={`${props.htmlClass} background-image`}
+				style={{
+					backgroundImage : `url(${props.regularUrl})`,
+					backgroundColor: props.bgColor,
+					backgroundPosition: `center center`,
+					backgroundSize: `cover`
+				}}
+				>
+					{props.children}
+				</div>
+			)
+
+			}
+		</>
+    )
   }
   
   export default BackgroundImage

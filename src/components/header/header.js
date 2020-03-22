@@ -24,14 +24,14 @@ const Header = (props) => {
             }
 
             {props.type === 'header-tour' &&
-                <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image">
+                <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image" regularUrl={props.backgroundImage}>
                     {/* <Nav /> */}
                     <Jumbotron fluid className="hero-section">
                         <Container >
                             <div className="hero-section__intro">
                                 <h4 className="h5 regular-weight mb-9">{props.city}, {props.country}</h4>
                                 <h1 className="hero-text-2">{props.name}</h1>  
-                                <div>
+                                <div className="text-center button-container">
                                     <p className='regular-weight header-p'>Duration: {props.duration}</p> 
                                     <ModalButton 
                                     color="hunta-red button-container" 

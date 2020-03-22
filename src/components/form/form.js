@@ -189,7 +189,7 @@ const Form = (props) => {
                             <FormGroup>
                                 <CustomInput type="select" name="duration" id="duration" onChange={handleChange} disabled={props.duration.length > 1 ? true : false } required >
                                     {props.duration.length > 1 ?
-                                        <option value={props.duration} selected>{props.duration}</option>
+                                        <option value={props.duration} defaultValue>{props.duration}</option>
                                         :
                                         <>
                                         <option value="0">Duration</option>
@@ -207,7 +207,7 @@ const Form = (props) => {
                     {props.destination &&
                         <Col md={4}>
                             <FormGroup>
-                                <Input type="text" name="destination" id="destination" placeholder="Destination" onChange={handleChange} value={props.destination.length > 1 ? props.destination : null} disabled={props.destination.length > 1 ? true : false } required />
+                                <Input type="text" name="destination" id="destination" placeholder="Destination" onChange={handleChange} value={props.destination.length > 1 ? props.destination : ""} disabled={props.destination.length > 1 ? true : false } required />
                             </FormGroup>
                         </Col>
                     }
@@ -282,13 +282,13 @@ Form.propTypes = {
     lastName: PropTypes.bool,
     emailAddress: PropTypes.bool,
     phoneNumber: PropTypes.bool,
-    destination: PropTypes.bool,
+    destination: PropTypes.any,
     flightDate: PropTypes.bool,
     ticketPrice: PropTypes.bool,
     noOfAdults: PropTypes.bool,
     noOfChildren: PropTypes.bool,
     noOfActivities: PropTypes.bool,
-    duration: PropTypes.bool,
+    duration: PropTypes.any,
     budgetInNaira: PropTypes.bool,
     classOfHotel: PropTypes.bool,
     message: PropTypes.bool,

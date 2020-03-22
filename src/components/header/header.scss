@@ -1,4 +1,4 @@
-.header-image::before{
+.header-image, .header-image::before{
     background-color: rgba($color: $hunta-blue, $alpha: .7);
     background-blend-mode: multiply;    
     // height: 418px;

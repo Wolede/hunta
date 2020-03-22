@@ -35,7 +35,7 @@ const Tours = () => {
     return (
             <Router basepath="/tours">
                 <ToursContent path="/" />
-                <Tour path="/:id" />
+                <Tour path="/:slug" />
                 {/* <Home path="/" /> */}
             </Router>            
     )
