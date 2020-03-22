@@ -19,9 +19,11 @@ const Nav = (props) => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <div className="nav-parent">
-            <Container>
-                <Row>
+        <>
+        { !props.reverse ? (
+            <div className="nav-parent">
+                <Container>
+                    <Row>
                     <Navbar>
                         <NavbarBrand href="/">
                             <Logo logoWhite />
@@ -35,14 +37,39 @@ const Nav = (props) => {
                             </NavItem>
                         </BootNav>
                     </Navbar>
-                </Row>
-            </Container>
-
-            {
-                isOpen && 
-                <OpenNav toggle={toggle} />
-            }
-        </div>
+                    </Row>
+                </Container>
+                {
+                    isOpen && 
+                    <OpenNav toggle={toggle} />
+                }
+            </div>
+        ) : (
+            <div className="nav-parent reverse">
+                <Container>
+                    <Row>
+                        <Navbar>
+                            <NavbarBrand href="/">
+                                <Logo logoRed/>
+                            </NavbarBrand>
+                            <BootNav>
+                                <SocialIcons />
+                                <NavItem>
+                                    <NavLink onClick={toggle}> 
+                                        <img src={MenuIcon} className="menu-icon" alt="menu-icon" />
+                                    </NavLink>
+                                </NavItem>
+                            </BootNav>
+                        </Navbar>
+                    </Row>
+                </Container>
+                {
+                    isOpen && 
+                    <OpenNav toggle={toggle} />
+                }
+            </div>
+        )}
+        </>
     )
 }
 
