@@ -93,11 +93,13 @@ const Calculate = () => {
                         <option value="9">9 Times</option>
                     </CustomInput>
                 </FormGroup>
-                <Button onClick={calculateJejeHandler}> Calculate </Button>
+                <Button color="hunta-red" onClick={calculateJejeHandler}> Calculate </Button>
 
             </BootForm>
             {
-                btnState ?  <Schedule schedule={schedule} className="calculate__schedule" /> : <h3> Kindly input a value </h3>
+                btnState ?  <Schedule schedule={schedule} className="calculate__schedule" /> : 
+                // <h4 className="h4 text-center"> Check your budget </h4> 
+                null
             }
     
         </div>

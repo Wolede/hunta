@@ -22,12 +22,14 @@ const Jeje = () => {
             <Section id="calculate-jeje">
                 <Container>
                     <h1 className="h1 mb-0 text-center">Calculate Jeje</h1>
-                    <ModalButton
-                        color="hunta-red button-container"
-                        form="jeje"                        
-                        >
-                        Calculate
-                    </ModalButton>
+                    <div className="text-center button-container">
+                        <ModalButton
+                            color="hunta-red button-container"
+                            form="jeje"                        
+                            >
+                            Calculate
+                        </ModalButton>
+                    </div>
                 </Container>
 
             </Section>
