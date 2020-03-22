@@ -7,6 +7,8 @@ import { Container } from 'reactstrap';
 import VideoBox from '../components/video-box/video-box';
 import Cards from '../components/cards/cards';
 import Header from '../components/header/header';
+import Calculate from '../components/calculate-jeje/calculate';
+import ModalButton from '../components/modal/modal-button';
 
 const Jeje = () => {
     return (
@@ -15,12 +17,19 @@ const Jeje = () => {
             {/* Hero Section */}
             <Nav />
             {/* insert hero here */}
-            <Header type="header-jeje"/>
+            <Header type="header-jeje" />
             {/* Calculate Jeje Section */}
             <Section id="calculate-jeje">
                 <Container>
-                    <h1 className="h1 text-center">Calculate Jeje</h1>
+                    <h1 className="h1 mb-0 text-center">Calculate Jeje</h1>
+                    <ModalButton
+                        color="hunta-red button-container"
+                        form="jeje"                        
+                        >
+                        Calculate
+                    </ModalButton>
                 </Container>
+
             </Section>
 
             {/* How it works section */}
@@ -35,7 +44,7 @@ const Jeje = () => {
             {/* Video Section */}
             <Section id="jeje">
                 <Container>
-                    <VideoBox/>
+                    <VideoBox />
                 </Container>
             </Section>
 

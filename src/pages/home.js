@@ -12,6 +12,7 @@ import Cards from '../components/cards/cards';
 import ModalButton from '../components/modal/modal-button';
 import { Link } from 'gatsby';
 import Embed from '../components/embed/embed';
+import Calculate from '../components/calculate-jeje/calculate'
 
 const Home = () => {
     return (
@@ -19,7 +20,8 @@ const Home = () => {
             <SEO title="Home" />
             {/* Hero Section */}
             <Nav />
-            <Hero/>
+            <Hero/>           
+
 
             {/* Tours Section */}
             <Section id="tours">
