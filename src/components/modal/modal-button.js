@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Modal as BootModal } from 'reactstrap'
 import Form from '../form/form';
+import Calculate from '../calculate-jeje/calculate';
 
 const ModalButton = (props) => {
 
@@ -8,6 +9,7 @@ const ModalButton = (props) => {
 
     const toggle = () => setModal(!modal);
     const externalCloseBtn = <button className="close" style={{ position: 'absolute', top: '15px', right: '15px' }} onClick={toggle}>&times;</button>;
+    
 
     return (
         <>
@@ -58,6 +60,12 @@ const ModalButton = (props) => {
                         budgetInNaira
                         buttonText="Start Conversation"
                         />
+                    </BootModal>
+                }
+
+                {props.form === "jeje" &&
+                    <BootModal isOpen={modal} toggle={toggle} className='' external={externalCloseBtn} size="xl" centered>
+                       <Calculate />
                     </BootModal>
                 }
         </>
