@@ -80,7 +80,7 @@ const Home = () => {
                     <Container>
                         <Cards type="card-users" />
                         <div className="text-center button-container">
-                            <Button color="hunta-red">View All</Button>
+                            <a href="https://www.trustpilot.com/review/huntagroup.com" className="btn btn-hunta-red" target="_blank">View All</a>
                         </div>
                     </Container>
                 </Section>
