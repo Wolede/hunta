@@ -10,7 +10,7 @@ const Header = (props) => {
         <div>
 
             {props.type === 'header-about' &&
-                <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image">
+                <BackgroundImage src="seatree.jpg" htmlTag="div" htmlClass="header-image">
                     {/* <Nav /> */}
                     <Jumbotron fluid className="hero-section">
                         <Container >
@@ -24,7 +24,7 @@ const Header = (props) => {
             }
 
             {props.type === 'header-tour' &&
-                <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image" regularUrl={props.backgroundImage}>
+                <BackgroundImage src="beach.jpg" htmlTag="div" htmlClass="header-image" regularUrl={props.backgroundImage}>
                     {/* <Nav /> */}
                     <Jumbotron fluid className="hero-section">
                         <Container >
@@ -49,7 +49,7 @@ const Header = (props) => {
             }
 
             {props.type === 'header-contact' && 
-                <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image">
+                <BackgroundImage src="mountains.jpg" htmlTag="div" htmlClass="header-image">
                     {/* <Nav /> */}
                     <Jumbotron fluid className="hero-section hero-contact">
                         <Container>
@@ -125,7 +125,7 @@ const Header = (props) => {
             }
 
             {props.type === 'header-tours' && 
-                <BackgroundImage src="beach.png" htmlTag="div" htmlClass="header-image">
+                <BackgroundImage src="beach.jpg" htmlTag="div" htmlClass="header-image">
                     {/* <Nav /> */}
                     <Jumbotron fluid className="hero-section">
                         <Container>

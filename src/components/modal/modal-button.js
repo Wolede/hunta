@@ -18,7 +18,7 @@ const ModalButton = (props) => {
                 {props.video &&
                     <BootModal isOpen={modal} toggle={toggle} className='' external={externalCloseBtn} size="xl" centered>
                         <div className="embed-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fbZO6UBtYTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="modalFrame"></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hv56QsCOajE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="modalFrame"></iframe>
                         </div>
                     </BootModal>
                 }
