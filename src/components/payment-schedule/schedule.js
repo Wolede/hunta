@@ -11,6 +11,11 @@ const schedule = (props) => {
         return n + (s[(v - 20) % 10] || s[v] || s[0]) + "";
     }
 
+    const numberWithCommas = (x) => {
+        let num = x.toFixed(2);
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
     let totalInterestAmount = 0;
     let totalPrincipal = 0;
     let totalLoanPayment = 0;
@@ -38,10 +43,10 @@ const schedule = (props) => {
                         return (
                             <tr key={i}>
                                 <th scope="row"> {getNumberWithOrdinal(schedule.paymentId)} payment </th>
-                                <td>{schedule.openBalance}</td>
-                                <td>{schedule.interestAmount}</td>
-                                <td>{schedule.Principal}</td>
-                                <td>{schedule.TotalPayment}</td>
+                                <td>{numberWithCommas(schedule.openBalance)}</td>
+                                <td>{numberWithCommas(schedule.interestAmount)}</td>
+                                <td>{numberWithCommas(schedule.Principal)}</td>
+                                <td>{numberWithCommas(schedule.TotalPayment)}</td>
                             </tr>
                         )
 
@@ -52,9 +57,9 @@ const schedule = (props) => {
                 <tr>
                     <td scope="row"></td>
                     <th>Total</th>
-                    <td>{totalInterestAmount}</td>
-                    <td>{totalPrincipal}</td>
-                    <td>{totalLoanPayment}</td>
+                    <td>{numberWithCommas(totalInterestAmount)}</td>
+                    <td>{numberWithCommas(totalPrincipal)}</td>
+                    <td>{numberWithCommas(totalLoanPayment)}</td>
                 </tr>
 
             </tbody>

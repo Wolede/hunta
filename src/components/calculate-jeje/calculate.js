@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Schedule from "../payment-schedule/schedule";
 // import ModalButton from '../modal/modal-button';
 
-import { Col, Row, Button, CustomInput, Form as BootForm, FormGroup, FormFeedback, Input, Container } from 'reactstrap';
+import { Button, CustomInput, Form as BootForm, FormGroup, Input } from 'reactstrap';
 
 const Calculate = () => {
     const [jejeForm, setJejeForm] = useState({
